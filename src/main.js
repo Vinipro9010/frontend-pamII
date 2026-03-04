@@ -26,5 +26,5 @@ import '@ionic/core/css/flex-utils.css';
 import '@ionic/core/css/display.css';
 
 //Pages
-import './pages/login/LoginPage';
+import './pages/login/LoginPage.js';
 

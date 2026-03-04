@@ -1,8 +1,8 @@
-export function createHeader(pagename) {
+export function createHeader(pageName) {
     return `
         <ion-header>
             <ion-toolbar color="primary">
-                <ion-title>${pagename}</ion-title>
+                <ion-title>${pageName}</ion-title>
             </ion-toolbar>
         </ion-header>
     `;

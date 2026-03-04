@@ -1,13 +1,13 @@
-import './LoginPage.css';
+import './LoginPage.css'
 import { createHeader } from '../../shared/Header.js'
 
-const pagename = 'login';
+const pageName = 'Login';
 
 class LoginPage extends HTMLElement {
 
-    connectedCallBack() {
+    connectedCallback() {
         this.classList.add('ion-page');
-        const cabecalho = createHeader(pagename);
+        const cabecalho = createHeader(pageName);
         this.innerHTML = `
             ${cabecalho}
         `;
