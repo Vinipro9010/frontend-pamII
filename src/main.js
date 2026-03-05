@@ -27,4 +27,5 @@ import '@ionic/core/css/display.css';
 
 //Pages
 import './pages/login/LoginPage.js';
+import './pages/home/HomePage.js';
 
