@@ -32,8 +32,46 @@ class LoginPage extends HTMLElement {
                     </ion-card-content>
                 </ion-card>
             </div>
-        `;
+            `;
+
+             // Refencias
+    const userInput = this.querySelector('#usuario');
+    const passInupt = this.querySelector('#senha');
+    const btnlogin = this.querySelector('#login');
+
+    btnlogin.addEventListener('click',async () => {
+    const usuario = userInput.value;
+    const senha = passInupt.value;
+
+    const loading = document.createElement('ion-loading')
+    loading.message = 'autenticando...';
+    loading.duration = 3000;
+    document.body.appendChild(loading);
+    await loading.present();
+    await loading.onDidDismiss(); // aguadar o tempo do loading
+
+    if (usuario == 'admin' && senha == 'admin'){
+        toast('login realizado com successo!', 'success')
+        document.querySelector('ion-router').push('/home', 'forward')
+        } else {
+            toast('usuário ou senha incorretos!')
+     
+     }
+    })
+
+    async function toast(menssagem, color = 'danger'){
+        const toast = document.createElement('ion-toast');
+        toast.message = menssagem;
+        toast.color = color;
+        toast.duration = 2000;
+        toast.position = 'bottom';
+
+        document.body.appendChild(toast);
+        return toast.present();
+    }
     }
 }
+
+   
 
 customElements.define('login-page', LoginPage);
