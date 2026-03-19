@@ -24,8 +24,11 @@ import '@ionic/core/css/text-alignment.css';
 import '@ionic/core/css/text-transformation.css';
 import '@ionic/core/css/flex-utils.css';
 import '@ionic/core/css/display.css';
+import './shared/util.js';
 
 //Pages
 import './pages/login/LoginPage.js';
 import './pages/home/HomePage.js';
+import './pages/produto/produtopage.js';
+import './pages/usuario/usuariopage.js';
 

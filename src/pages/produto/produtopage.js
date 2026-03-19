@@ -1,10 +1,11 @@
-import './HomePage.css'
+import './produtopage.css'
 import { createHeader } from '../../shared/Header.js'
 import { logout } from '../../shared/util.js';
 
-const pageName = 'Home';
 
-class HomePage extends HTMLElement {
+const pageName = 'produtos';
+
+class ProdutoPage extends HTMLElement {
 
     connectedCallback() {
         this.classList.add('ion-page');
@@ -16,4 +17,5 @@ class HomePage extends HTMLElement {
     }
 }
 
-customElements.define('home-page', HomePage);
+customElements.define('produto-page', ProdutoPage);
+

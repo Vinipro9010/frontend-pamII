@@ -1,10 +1,11 @@
-import './HomePage.css'
+import './usuariopage.css'
 import { createHeader } from '../../shared/Header.js'
 import { logout } from '../../shared/util.js';
 
-const pageName = 'Home';
 
-class HomePage extends HTMLElement {
+const pageName = 'usuarios';
+
+class UsuarioPage extends HTMLElement {
 
     connectedCallback() {
         this.classList.add('ion-page');
@@ -12,8 +13,8 @@ class HomePage extends HTMLElement {
         this.innerHTML = `
             ${cabecalho}
             `;
-             this.querySelector('#logout-btn').addEventListener('click', logout);
+            this.querySelector('#logout-btn').addEventListener('click', logout);
     }
 }
 
-customElements.define('home-page', HomePage);
+customElements.define('usuario-page', UsuarioPage);
