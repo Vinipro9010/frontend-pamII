@@ -29,6 +29,10 @@ import './shared/util.js';
 //Pages
 import './pages/login/LoginPage.js';
 import './pages/home/HomePage.js';
-import './pages/produto/produtopage.js';
+
+// produto
+import './pages/produto/Listprodutopage.js';
+import './pages/produto/CadProdutoPage.js';
 import './pages/usuario/usuariopage.js';
+import './pages/produto/EditProdutoPage.js';
 

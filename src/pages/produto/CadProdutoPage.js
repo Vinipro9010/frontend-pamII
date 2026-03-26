@@ -1,11 +1,11 @@
-import './produtopage.css'
+import './Cadprodutopage.css'
 import { createHeader } from '../../shared/Header.js'
 import { logout } from '../../shared/util.js';
 
 
-const pageName = 'produtos';
+const pageName = 'Cadastar Produto';
 
-class ProdutoPage extends HTMLElement {
+class CadProdutoPage extends HTMLElement {
 
     connectedCallback() {
         this.classList.add('ion-page');
@@ -17,5 +17,5 @@ class ProdutoPage extends HTMLElement {
     }
 }
 
-customElements.define('produto-page', ProdutoPage);
+customElements.define('cad-produto-page', CadProdutoPage);
 
