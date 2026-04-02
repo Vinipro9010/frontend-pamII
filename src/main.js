@@ -33,6 +33,6 @@ import './pages/home/HomePage.js';
 // produto
 import './pages/produto/Listprodutopage.js';
 import './pages/produto/CadProdutoPage.js';
-import './pages/usuario/usuariopage.js';
+import './pages/usuario/listusuariopage.js;
 import './pages/produto/EditProdutoPage.js';
 

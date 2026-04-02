@@ -17,33 +17,33 @@ class ListProdutoPage extends HTMLElement {
             </ion-content>
             `;
              this.querySelector('#logout-btn').addEventListener('click', logout);
-
-         const produtos= JSON.parse(JSON.stringify(this.fe))   
+        // buscando os produtos
+         const produtos= this.fetchProdutos() || []; 
          // renderizando os produtos em html
-            this.renderProdutos(Produtos);
+            this.renderProdutos(produtos);
     }
 
-    async fetchProdutos(){
-        return `{
+     fetchProdutos(){
+        return [
             {
                 "id": 1,
                 "dsc_produto": "macarronada",
                 "valor_unit": 20.99,
-                "status": 1,
+                "status": 1
             },
              {
                 "id": 2,
                 "dsc_produto": "salmão",
                 "valor_unit": 40.99,
-                "status": 1,
+                "status": 1
             },
              {
                 "id": 3,
                 "dsc_produto": "batata frita",
                 "valor_unit": 27.99,
-                "status": 0,
-            },
-        }`
+                "status": 0
+            }
+        ]
     }
     renderProdutos(produtos){
          const container =this.querySelector(".list-produto");
@@ -55,7 +55,7 @@ class ListProdutoPage extends HTMLElement {
 
          // formatando valores em reais
          const formatMoeda = (value) => {
-            return value.tolocaleString('pt-BR', {style: 'currency', currency: 'BRL' });
+            return value.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL' });
          }
 
          const produtoItems = produtos.map(produto => `
@@ -69,7 +69,7 @@ class ListProdutoPage extends HTMLElement {
                  ></ion-icon>
                  <span>${produto.dsc_produto}</span>
                </h2>
-               <p>${formatMoeda(produto.valor_uint)}</p>
+               <p>${formatMoeda(produto.valor_unit)}</p>
               </ion-label>
 
               <ion-buttons slot="end">
